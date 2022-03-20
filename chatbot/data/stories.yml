@@ -1,0 +1,186 @@
+version: "2.0"
+stories:
+- story: interactive_story_1_old
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: Interview Adenauer
+  - slot_was_set:
+    - person_name: Interview Adenauer
+  - action: action_identify_person
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_5_old
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: events
+  - action: utter_events
+  - intent: events_search
+    entities:
+    - event_name: German Reunification
+  - slot_was_set:
+    - event_name: German Reunification
+  - action: action_identify_event
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: Interview Adenauer
+  - slot_was_set:
+    - person_name: Interview Adenauer
+  - action: action_identify_person
+  - intent: gratitute
+  - action: utter_pleasure
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: Election Results 1933
+  - slot_was_set:
+    - person_name: Election Results 1933
+  - action: action_identify_person
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons_search
+    entities:
+    - person_name: Fritz Ulrich
+  - slot_was_set:
+    - person_name: Fritz Ulrich
+  - action: action_identify_person
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: Election Results 1932
+  - slot_was_set:
+    - person_name: Election Results 1932
+  - action: action_identify_person
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID a89af429991140b196a97a21984ff8ea
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: German Reunification
+  - slot_was_set:
+    - person_name: German Reunification
+  - action: action_identify_person
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: goodbye
+  - action: utter_goodbye
+  - intent: greet
+  - action: utter_greet
+  - intent: info
+  - action: utter_info
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: info
+  - action: utter_info
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: goodbye
+  - action: utter_goodbye
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: events
+  - action: utter_events
+  - intent: persons_search
+    entities:
+    - person_name: German Reunification
+  - slot_was_set:
+    - person_name: German Reunification
+  - action: action_identify_person
+  - intent: mood_great
+  - action: utter_happy
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID a3d8927b29fe4a7aad08e0f2f4a0c150
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: info
+  - action: utter_info
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: greet
+  - action: utter_greet
+  - intent: events
+  - action: utter_events
+  - intent: persons_search
+    entities:
+    - person_name: Election Results 1930
+  - slot_was_set:
+    - person_name: Election Results 1930
+  - action: action_identify_person
+  - intent: mood_great
+  - action: utter_happy
+  - intent: gratitute
+  - action: utter_pleasure
+  - intent: persons_search
+    entities:
+    - person_name: Fritz Ulrich
+  - slot_was_set:
+    - person_name: Fritz Ulrich
+  - action: action_identify_person
+  - intent: mood_great
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+- story: Story from Conversation ID 1187c7aa8ba741aea35b3d71c9b12087
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: persons
+  - action: utter_persons
+  - intent: persons_search
+    entities:
+    - person_name: Ritesh
+  - slot_was_set:
+    - person_name: Ritesh
+  - action: action_identify_person
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_deny

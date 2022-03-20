@@ -1,0 +1,125 @@
+version: "2.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Good morning
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - Bye
+    - See you soon
+    - Ok See you soon
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - Yes
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - No
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - super stoked
+    - extremely good
+    - so so perfect
+    - Perfect! Thanks
+    - Great
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: persons_search
+  examples: |
+    - Please tell me something about [Ritesh](person_name)
+    - I want to know about [Kai](person_name)
+    - [Kai](person_name)
+    - [Ritesh](person_name)
+    - [Fritz Ulrich](person_name)
+    - [Oskar Messter](person_name)
+    - [German Reunification](person_name)
+    - [Election Results 1930](person_name)
+    - [Resistance](person_name)
+    - [Paris Agreements](person_name)
+    - Tell me something about [Fritz Ulrich](person_name)
+    - [Interview Adenauer](person_name)
+    - [Election Results 1933](person_name)
+    - Please tell me something about [Fritz Ulrich](person_name)
+    - [Election Results 1932](person_name)
+    - what about [German Reunification](person_name)
+    - Anything about [Oskar Messter](person_name)
+- intent: events_search
+  examples: |
+    - Please tell me something about [football](event_name)
+    - I want to know about [Cricket](event_name)
+    - [Baseball](event_name)
+- intent: info_search
+  examples: |
+    - Please provide me some general information
+    - i need general info
+    - general information
+    - general info
+    - Need to collect some general information
+    - Random Information
+- intent: gratitute
+  examples: |
+    - Thank you
+    - Thanks
+    - Thanx
+    - Thank you so much
+    - Sure, thanks
+    - ok thanks

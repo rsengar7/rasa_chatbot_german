@@ -1,0 +1,100 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- gratitute:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- persons_search:
+    use_entities: true
+- events:
+    use_entities: true
+- info:
+    use_entities: true
+- persons:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- events_search:
+    use_entities: true
+- info_search:
+    use_entities: true
+entities:
+- event_name
+- person_name
+slots:
+  person_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  event_name:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - buttons:
+    - payload: /persons
+      title: Search for Persons
+    - payload: /events
+      title: Search for Events
+    - payload: /info
+      title: General Info
+    text: Welcome! I am your search assistant. I can help you with
+  utter_persons:
+  - text: Bitte teilen Sie mir den Namen der Person mit, für die Sie sich interessieren
+  utter_persons_search:
+  - text: For (Persons) we have (and then the info from the list)
+  utter_events:
+  - text: Please tell me the name of the event you are interested in
+  utter_events_search:
+  - text: For (Events) we have (and then the info from the list---------)
+  utter_info:
+  - text: Please visit https://google.com
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_pleasure:
+  - text: My Pleasure
+  utter_deny:
+  - text: My Bad! I am still learning new stuff will get better and help you with it, in the meantime i have forwarded your request to management. Someone from our team will get back to you asap.
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- action_identify_event
+- action_identify_person
+- utter_cheer_up
+- utter_did_that_help
+- utter_events
+- utter_goodbye
+- utter_greet
+- utter_happy
+- utter_info
+- utter_persons
+- utter_persons_search
+- utter_pleasure
+- utter_deny
+forms: {}
+e2e_actions: []
