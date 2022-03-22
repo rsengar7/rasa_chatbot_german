@@ -58,22 +58,27 @@ class ActionIdentifyPerson(Action):
             data_title = df[(df['Event'] == name) & (df['Title'] != 0)]
             data_movie_title = df[(df['Event'] == name) & (df['Movie Title'] != 0)]
 
-        data_title = " / ".join(data_title['Title'].values)
+        data_title = " \n<>".join(data_title['Title'].values)
 
         print("data_title ---->",data_title)
 
-        data_movie_title = " / ".join(data_movie_title['Movie Title'].values)
+        data_movie_title = " \n<>".join(data_movie_title['Movie Title'].values)
 
         print("data_movie_title---->",data_movie_title)
 
         info = ""
         if len(data_title) > 0:
-            info += "Titles ("+data_title+") "
+            info += "\n (Titles) : \n<>"
+            info += data_title
         if len(data_movie_title) > 0:
-            info += "Movie Titles ("+data_movie_title+")"
-
+            info += "\n (Movie Titles) : \n<>"
+            info += data_movie_title
+            # info += "Movie Titles ("+data_movie_title+")"
+        
+        print("Info----------------")
+        print(info)
         if info != "":
-            temp = "For ({}) we have ({})".format(person_name, info)
+            temp = "For ({}) we have {}".format(person_name, info)
         else:
             temp = "For ({}) we don't have any information".format(person_name)
 
@@ -101,12 +106,12 @@ class ActionIdentifyEvent(Action):
         data_movie_title = df[(df['Event'] == event_name) & (df['Movie Title'] != 0)]
         print("Event================")
         print(data_title.head())
-
-        data_title = " | ".join(data_title['Title'].values)
+        # data_title = 
+        data_title = " \n ".join(data_title['Title'].values)
 
         print("data_title ---->",data_title)
 
-        data_movie_title = " | ".join(data_movie_title['Movie Title'].values)
+        data_movie_title = " \n ".join(data_movie_title['Movie Title'].values)
 
         print("data_movie_title---->",data_movie_title)
 

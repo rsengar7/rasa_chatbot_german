@@ -56,32 +56,32 @@ responses:
       title: Search for Events
     - payload: /info
       title: General Info
-    text: Welcome! I am your search assistant. I can help you with
+    text: Willkommen! Ich bin Ihr Suchassistent. Ich kann dir dabei helfen
   utter_persons:
   - text: Bitte teilen Sie mir den Namen der Person mit, für die Sie sich interessieren
   utter_persons_search:
-  - text: For (Persons) we have (and then the info from the list)
+  - text: Für (Personen) haben wir (und dann die Info aus der Liste)
   utter_events:
-  - text: Please tell me the name of the event you are interested in
+  - text: Bitte teilen Sie mir den Namen der Veranstaltung mit, an der Sie interessiert sind
   utter_events_search:
-  - text: For (Events) we have (and then the info from the list---------)
+  - text: Für (Events) haben wir (und dann die Info aus der Liste---------)
   utter_info:
   - text: Please visit https://google.com
   utter_cheer_up:
   - image: https://i.imgur.com/nGF1K8f.jpg
-    text: 'Here is something to cheer you up:'
+    text: „Hier ist etwas, um dich aufzuheitern
   utter_did_that_help:
-  - text: Did that help you?
+  - text: Hat dir das geholfen?
   utter_happy:
-  - text: Great, carry on!
+  - text: Super, weiter so!
   utter_pleasure:
-  - text: My Pleasure
+  - text: Freut mich
   utter_deny:
-  - text: My Bad! I am still learning new stuff will get better and help you with it, in the meantime i have forwarded your request to management. Someone from our team will get back to you asap.
+  - text: Mein Fehler! Ich lerne immer noch neue Sachen, werde besser und helfe Ihnen dabei, in der Zwischenzeit habe ich Ihre Anfrage an das Management weitergeleitet. Jemand aus unserem Team wird sich so schnell wie möglich bei Ihnen melden.
   utter_goodbye:
-  - text: Bye
+  - text: Wiedersehen
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: Ich bin ein Bot, powered by Rasa.
 actions:
 - action_identify_event
 - action_identify_person
